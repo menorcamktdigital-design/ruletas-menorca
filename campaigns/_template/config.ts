@@ -1,0 +1,47 @@
+// Copia esta carpeta completa para crear una nueva campaña.
+// Solo necesitas editar este archivo config.ts.
+import type { CampaignConfig } from '../../src/types';
+
+export const config: CampaignConfig = {
+  title: 'Ruleta - Menorca Collection',
+  description: 'Gira la ruleta y gana descuentos exclusivos en terrenos y viviendas.',
+  heading: 'Gira la ruleta y gana',
+  subheading: 'Descuentos imperdibles para ti.',
+  fechaVigencia: '',
+  bgImage: '',
+  ruletaImg: 'https://menorca.pe/wp-content/uploads/2025/06/ruleta_456.png',
+  ganasteImg: 'https://menorca.pe/wp-content/uploads/2025/06/ganaste-ruleta.png',
+  graciasImg: 'https://menorca.pe/wp-content/uploads/2025/06/gracias-por-participar.png',
+  logoImg: '',
+  pinImg: 'https://menorca.pe/wp-content/uploads/2025/06/pin-ruleta.svg',
+  botonGiraImg: 'https://menorca.pe/wp-content/uploads/2025/06/gira-y-gana.png',
+  sonidoUrl: '/sounds/sonido-ruleta-menorca.mp3',
+  utmSource: 'ruleta',
+  premios: [
+    { texto: 'Tu reserva vale x20', img: 'https://menorca.pe/wp-content/uploads/2025/06/reserva-x20.png' },
+    { texto: '$500 de Dsct. adicional', img: 'https://menorca.pe/wp-content/uploads/2025/06/500-dscto-adicional.png' },
+    { texto: 'Tu reserva vale x10', img: 'https://menorca.pe/wp-content/uploads/2025/06/reserva-x10.png' },
+    { texto: '+2% de Dsct. adicional', img: 'https://menorca.pe/wp-content/uploads/2025/06/2-dsct-adicional.png' },
+    { texto: '+3% de Dsct. adicional', img: 'https://menorca.pe/wp-content/uploads/2025/06/3-dsct-adicional.png' },
+    { texto: 'Tu reserva vale x30', img: 'https://menorca.pe/wp-content/uploads/2025/06/reserva-x30.png' },
+    { texto: '+1% de Dsct. adicional', img: 'https://menorca.pe/wp-content/uploads/2025/06/1-dsct-adicional.png' },
+    { texto: '$300 de Dsct. adicional', img: 'https://menorca.pe/wp-content/uploads/2025/06/300-dscto-adicional.png' },
+  ],
+  plazas: [
+    { label: 'Arequipa', id: 41 },
+    { label: 'Carabayllo', id: 57 },
+    { label: 'Cieneguilla', id: 12 },
+    { label: 'Chilca', id: 56 },
+    { label: 'Chiclayo - Posada del Sol', id: 52 },
+    { label: 'Chiclayo - San Antonio', id: 68 },
+    { label: 'Ica', id: 54 },
+    { label: 'Mala', id: 31 },
+    { label: 'Pachacamac', id: 30 },
+    { label: 'Piura', id: 36 },
+    { label: 'Pisco', id: 59 },
+    { label: 'Punta Hermosa', id: 58 },
+    { label: 'Punta Rocas', id: 65 },
+    { label: 'Pucusana', id: 70 },
+    { label: 'Chorrillos', id: 69 },
+  ],
+};

@@ -1,0 +1,668 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #026d32;
+  --color-secondary: #158030;
+  --color-accent: #e9b12a;
+  --color-danger: #ff1248;
+  --font-sans: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ================================================
+   FOOTER MENORCA — variables
+   ================================================ */
+:root {
+  --footer-green-dark: #005f27;
+  --footer-green-mid: #158c30;
+  --footer-green-light: #86c441;
+  --footer-radius: 5px;
+  --footer-max-width: 1360px;
+}
+
+/* ================================================
+   FUENTE EUDOXUS SANS
+   ================================================ */
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../fonts/EudoxusSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../fonts/EudoxusSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../fonts/EudoxusSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../fonts/EudoxusSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================================
+   FUENTE ICOMOON (iconos redes sociales)
+   ================================================ */
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-tiktok::before    { content: "\e932"; }
+.icon-facebook::before  { content: "\ea90"; }
+.icon-instagram::before { content: "\ea92"; }
+.icon-linkedin2::before { content: "\eaca"; }
+
+/* ================================================
+   FOOTER — contenedor y grilla
+   ================================================ */
+.footer-container {
+  margin: 0 auto;
+  max-width: var(--footer-max-width);
+  width: 90%;
+}
+@media only screen and (min-width: 800px) {
+  .footer-container { width: 80%; }
+}
+@media only screen and (min-width: 1200px) {
+  .footer-container { width: 1200px; }
+}
+@media only screen and (min-width: 1400px) {
+  .footer-container { width: 1220px; }
+}
+
+.footer-grid-col {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+.footer-flex  { display: flex; }
+.footer-gap-m { gap: 16px; }
+
+.grid-s-12 { grid-column: span 12; }
+
+@media screen and (min-width: 800px) {
+  .grid-m-6 { grid-column: span 6; }
+}
+@media screen and (min-width: 1200px) {
+  .grid-l-3 { grid-column: span 3; }
+}
+
+/* ================================================
+   FOOTER — estilos generales
+   ================================================ */
+.footer-menorca {
+  background: var(--footer-green-mid);
+  font-family: "Eudoxus Sans", "Inter", sans-serif;
+}
+.footer-menorca *,
+.footer-menorca a,
+.footer-menorca p,
+.footer-menorca strong,
+.footer-menorca span,
+.footer-menorca div,
+.footer-menorca li,
+.footer-copy {
+  font-family: "Eudoxus Sans", "Inter", sans-serif !important;
+  color: white;
+}
+.footer-menorca a {
+  display: block;
+  padding: 6px 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.footer-menorca a:hover {
+  transform: translateY(-3px);
+}
+.footer-grid {
+  padding: 50px 0;
+}
+.footer-isotipo {
+  display: block;
+  margin-bottom: 24px;
+  width: 100px;
+}
+.footer-menorca strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.footer-menorca ul {
+  list-style: circle;
+  padding-left: 17px;
+}
+.footer-menorca ul li {
+  color: white;
+  font-size: 0.875rem;
+}
+.footer-menorca ul li span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.footer-siguenos {
+  display: block;
+  margin-bottom: 12px !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* ================================================
+   FOOTER — redes sociales (círculos)
+   ================================================ */
+.footer-menorca .social__links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer-menorca .social__links a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0 !important;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.footer-menorca .social__links a:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px);
+}
+.footer-menorca .social__links [class^="icon-"] {
+  font-size: 1rem;
+  line-height: 1;
+  color: white;
+}
+
+/* ================================================
+   FOOTER — copyright
+   ================================================ */
+.footer-copy {
+  padding: 20px 0;
+  background: var(--footer-green-dark);
+  text-align: center;
+  font-size: 0.875rem;
+  font-family: "Eudoxus Sans", "Inter", sans-serif !important;
+}
+
+/* ================================================
+   LIBRO DE RECLAMACIONES
+   ================================================ */
+a.ldr {
+  background: #fff;
+  color: #3177b7 !important;
+  display: grid;
+  width: 100px;
+  text-align: center;
+  gap: 6px;
+  justify-items: center;
+  line-height: 1.2;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 10px 8px;
+  border-radius: var(--footer-radius);
+  height: max-content;
+  font-family: "Eudoxus Sans", "Inter", sans-serif !important;
+  transition: transform 0.2s;
+}
+a.ldr:hover {
+  transform: translateY(-3px);
+}
+a.ldr img {
+  filter: drop-shadow(0 1px 2px #888);
+  max-width: 50px;
+}
+
+/* ================================================
+   DCI — Defensoría del cliente inmobiliario
+   ================================================ */
+a.dci {
+  padding: 0;
+  display: flex !important;
+  align-items: center;
+  transition: transform 0.2s;
+}
+a.dci:hover {
+  transform: translateY(-3px);
+}
+a.dci img {
+  max-width: 130px;
+  padding: 0 8px;
+}
+
+/* ================================================
+   BOTÓN FLOTANTE WHATSAPP
+   ================================================ */
+.bot-floting {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 5;
+}
+.bot-floting:hover .asesor::before {
+  background: var(--footer-green-light);
+}
+.bot-floting .asesor {
+  position: relative;
+}
+.bot-floting .asesor::before {
+  content: "";
+  position: absolute;
+  background: #e0e0e0;
+  width: 64px;
+  height: 64px;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px #40404066;
+  transition: 0.3s;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+.bot-floting .asesor img {
+  width: 64px;
+  position: relative;
+  display: block;
+  margin-bottom: 1px;
+}
+.bot-floting .dialog {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  transition: 0.5s;
+}
+.bot-floting .dialog img {
+  width: 20px;
+  filter: drop-shadow(0 4px 8px #40404066);
+}
+@media only screen and (min-width: 1000px) {
+  .bot-floting {
+    transform: scale(1.35);
+    right: 4%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .bot-floting {
+    right: 3%;
+    bottom: 6%;
+  }
+}
+
+/* ================================================
+   ANIMACIÓN REBOTE (notificación WhatsApp)
+   ================================================ */
+.rebote {
+  animation: rebote 1s ease;
+}
+@keyframes rebote {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40%  { transform: translateY(-30px); }
+  60%  { transform: translateY(-15px); }
+}
+
+/* ================================================
+   BARRA TÉRMINOS DEL JUEGO
+   ================================================ */
+.terminos-bar {
+  background: #e9b12a;
+  padding: 10px 0;
+}
+.terminos-bar__inner {
+  margin: 0 auto;
+  max-width: var(--footer-max-width);
+  width: 90%;
+  padding: 0;
+}
+@media only screen and (min-width: 800px) {
+  .terminos-bar__inner { width: 80%; }
+}
+@media only screen and (min-width: 1200px) {
+  .terminos-bar__inner { width: 1200px; }
+}
+@media only screen and (min-width: 1400px) {
+  .terminos-bar__inner { width: 1220px; }
+}
+.terminos-bar span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+/* ================================================
+   RULETA — wrapper con base de soporte
+   ================================================ */
+.roulette-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.roulette-base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.roulette-base__neck {
+  width: 40px;
+  height: 38px;
+  background: linear-gradient(180deg, #2e7d32 0%, #1b5e20 100%);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+}
+.roulette-base__foot {
+  width: 160px;
+  height: 22px;
+  background: linear-gradient(180deg, #2e7d32 0%, #1b5e20 100%);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+@layer components {
+  .roulette {
+    position: relative;
+    width: min(480px, 90vw);
+    aspect-ratio: 1 / 1;
+  }
+
+  .spinner {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    will-change: transform;
+  }
+
+  .btn-gira {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 28%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    border-radius: 9999px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, opacity 0.2s ease;
+  }
+
+  .btn-gira:hover {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+
+  .btn-gira:active {
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+
+  .btn-gira img {
+    width: 100%;
+    border-radius: 9999px;
+  }
+
+  .roulette.busy .btn-gira {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+
+  .roulette--disabled .btn-gira {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .roulette-disabled-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .roulette-disabled-overlay span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    line-height: 1.4;
+    padding: 0 20px;
+  }
+
+  .input-dark {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .input-dark::placeholder {
+    color: #9ca3af;
+  }
+
+  .input-dark:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgb(233 177 42 / 0.2);
+  }
+
+  .input-dark option {
+    background: #fff;
+    color: #1a1a1a;
+  }
+}
+
+/* ================================================
+   MODAL — panel de premio con estrellas
+   ================================================ */
+.modal-prize-panel {
+  background: linear-gradient(160deg, #0a6628 0%, #0d7a2e 50%, #116632 100%);
+  border-radius: 1rem 0 0 1rem;
+  min-height: 340px;
+}
+@media (max-width: 767px) {
+  .modal-prize-panel {
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+.modal-star {
+  position: absolute;
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  line-height: 1;
+  animation: starPulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+}
+.modal-star--tl { top: 14px;  left: 16px;  font-size: 2rem;   animation-delay: 0s; }
+.modal-star--tr { top: 12px;  right: 20px; font-size: 1.3rem;  animation-delay: 0.4s; }
+.modal-star--bl { bottom: 18px; left: 20px; font-size: 1.2rem; animation-delay: 0.8s; }
+.modal-star--br { bottom: 14px; right: 16px; font-size: 1.8rem; animation-delay: 1.2s; }
+.modal-star--ml { top: 45%; left: 8px;  font-size: 1rem;   animation-delay: 0.6s; }
+.modal-star--mr { top: 38%; right: 10px; font-size: 1.5rem; animation-delay: 1.6s; }
+
+@keyframes starPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.3); }
+}
+
+/* ================================================
+   PLAZA SELECTOR — custom searchable dropdown
+   ================================================ */
+.plaza-selector {
+  position: relative;
+  width: 100%;
+}
+
+.plaza-selector__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  text-align: left;
+  gap: 8px;
+}
+
+.plaza-selector__trigger:hover:not(.disabled),
+.plaza-selector__trigger.open {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgb(233 177 42 / 0.2);
+}
+
+.plaza-selector__trigger.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f3f4f6;
+}
+
+.plaza-selector__value {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.plaza-selector__placeholder {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  flex: 1;
+}
+
+.plaza-selector__chevron {
+  color: #6b7280;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.plaza-selector__chevron.rotated {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+.plaza-selector__dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  border-radius: 0.6rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.plaza-selector__search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.plaza-selector__search-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.plaza-selector__search {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.85rem;
+  color: #1a1a1a;
+}
+
+.plaza-selector__search::placeholder {
+  color: #9ca3af;
+}
+
+.plaza-selector__list {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.plaza-selector__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.plaza-selector__option:hover {
+  background: #f0fdf4;
+  color: var(--color-primary);
+}
+
+.plaza-selector__option.selected {
+  background: #dcfce7;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.plaza-selector__option.selected svg {
+  color: var(--color-primary);
+}
+
+.plaza-selector__empty {
+  padding: 0.75rem 0.9rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/fiestas-patrias", "destination": "/fiestas-patrias/index.html" },
+    { "source": "/fiestas-patrias/", "destination": "/fiestas-patrias/index.html" }
+  ]
+}
