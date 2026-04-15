@@ -155,11 +155,11 @@ export function LeadForm({ config, plaza, premio, onSuccess }: LeadFormProps) {
           />
           <span className="text-xs text-white/80 leading-snug">
             He leído y acepto los{' '}
-            <a href="https://menorca.pe/terminos-y-condiciones" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:opacity-80">
+            <a href="https://menorca.pe/legal/" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:opacity-80">
               Términos y condiciones
             </a>{' '}
             y la{' '}
-            <a href="https://menorca.pe/politica-de-privacidad" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:opacity-80">
+            <a href="https://menorca.pe/wp-content/uploads/2025/07/politica_de_privacidad.pdf" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:opacity-80">
               Política de Privacidad
             </a>
           </span>
@@ -176,7 +176,7 @@ export function LeadForm({ config, plaza, premio, onSuccess }: LeadFormProps) {
           />
           <span className="text-xs text-white/80 leading-snug">
             He leído y acepto el{' '}
-            <a href="https://menorca.pe/consentimiento-clientes-potenciales" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:opacity-80">
+            <a href="https://menorca.pe/consentimiento-de-cliente-potencial/" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:opacity-80">
               Consentimiento de Clientes potenciales
             </a>
           </span>
