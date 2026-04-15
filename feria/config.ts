@@ -1,4 +1,4 @@
-import type { CampaignConfig } from '../../src/types';
+import type { CampaignConfig } from '../src/types';
 
 // Premios compartidos entre todos los proyectos (puedes personalizarlos por plaza abajo)
 const premiosBase = [
@@ -13,7 +13,7 @@ const premiosBase = [
 ];
 
 export const config: CampaignConfig = {
-  title: 'Ruleta Fiestas Patrias 2025 - Menorca Collection',
+  title: 'Feria Virtual Menorca 2025 - Ruleta de Premios',
   description: 'Gira la ruleta y gana descuentos exclusivos en terrenos y viviendas.',
   heading: '¡Gira la ruleta y gana!',
   subheading: '¡La Feria Menorca volvió con descuentos IMPERDIBLES!\n¡No te lo pierdas!',
@@ -26,7 +26,7 @@ export const config: CampaignConfig = {
   pinImg: 'https://menorca.pe/wp-content/uploads/2025/06/pin-ruleta.svg',
   botonGiraImg: 'https://menorca.pe/wp-content/uploads/2025/06/gira-y-gana.png',
   sonidoUrl: '/sounds/sonido-ruleta-menorca.mp3',
-  utmSource: 'ruleta-fiestas-patrias-2025',
+  utmSource: 'ruleta-feria-virtual-2025',
   premios: premiosBase, // fallback global
   plazas: [
     {
